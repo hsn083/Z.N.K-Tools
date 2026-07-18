@@ -32,7 +32,7 @@ export default function ReviewsPage() {
           </div>
           <div className="glass rounded-2xl p-6 text-center">
             <div className="text-4xl font-bold text-white mb-2">{reviews.length}+</div>
-            <div className="text-gray-400">Sample Reviews</div>
+            <div className="text-gray-400">Reviews</div>
           </div>
           <div className="glass rounded-2xl p-6 text-center">
             <div className="text-4xl font-bold text-white mb-2">100%</div>

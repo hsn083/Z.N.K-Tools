@@ -27,10 +27,10 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/znktools' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/znktools' },
-    { name: 'TikTok', icon: FaTiktok, href: 'https://www.tiktok.com/@znktools' },
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/znktools' },
+    { name: 'Facebook', icon: Facebook, href: '#znktools' },
+    { name: 'Instagram', icon: Instagram, href: '#znktools' },
+    { name: 'TikTok', icon: FaTiktok, href: '#znktools' },
+    { name: 'YouTube', icon: Youtube, href: '#znktools' },
   ];
 
   return (
@@ -95,7 +95,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <Mail className="w-5 h-5 text-neon-purple" />
-                <span>support@znktools.com</span>
+                <span>work31323@gmail.com</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-neon-pink" />
