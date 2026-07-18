@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "AI Tools",
+    "image": "/AI Tools.png",
+    "description": "Advanced AI-powered tools for productivity and creativity",
+    "productCount": 4,
+    "color": "from-blue-500 to-purple-500"
+  },
+  {
+    "id": 2,
+    "name": "Streaming",
+    "image": "/Streaming.png",
+    "description": "Premium streaming services for entertainment",
+    "productCount": 1,
+    "color": "from-pink-500 to-red-500"
+  },
+  {
+    "id": 3,
+    "name": "Learning",
+    "image": "/Learning.png",
+    "description": "Educational platforms to enhance your skills",
+    "productCount": 1,
+    "color": "from-green-500 to-teal-500"
+  },
+  {
+    "id": 4,
+    "name": "Productivity",
+    "image": "/Productivity.png",
+    "description": "Tools to boost your productivity and career",
+    "productCount": 1,
+    "color": "from-yellow-500 to-orange-500"
+  },
+  {
+    "id": 5,
+    "name": "Video Editing",
+    "image": "/Video Editing.png",
+    "description": "Professional video editing software and tools",
+    "productCount": 1,
+    "color": "from-purple-500 to-pink-500"
+  }
+]

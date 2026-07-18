@@ -1,0 +1,226 @@
+[
+  {
+    "id": 1,
+    "slug": "chatgpt-plus",
+    "name": "ChatGPT Plus",
+    "category": "AI Tools",
+    "price": 1899,
+    "oldPrice": 2500,
+    "rating": 5,
+    "reviewCount": 286,
+    "description": "Unlock the full power of ChatGPT with GPT-4, faster response times, priority access during peak hours, and early access to new features.",
+    "features": [
+      "GPT-4 Access",
+      "Faster Response Times",
+      "Priority Access",
+      "Early Feature Access",
+      "Image Generation with DALL-E",
+      "Web Browsing Capability"
+    ],
+    "benefits": [
+      "Boost productivity with advanced AI",
+      "Get accurate and detailed responses",
+      "Access during high-demand periods",
+      "Experience cutting-edge AI features"
+    ],
+    "image": "/ChatGPT.png",
+    "popular": true,
+    "badge": "Best Seller"
+  },
+  {
+    "id": 2,
+    "slug": "capcut-pro",
+    "name": "CapCut Pro",
+    "category": "Video Editing",
+    "price": 999,
+    "oldPrice": 1499,
+    "rating": 5,
+    "reviewCount": 214,
+    "description": "Professional video editing suite with advanced effects, AI-powered tools, unlimited exports, and premium templates for content creators.",
+    "features": [
+      "Advanced Video Effects",
+      "AI-Powered Tools",
+      "Unlimited Exports",
+      "Premium Templates",
+      "No Watermark",
+      "Cloud Storage"
+    ],
+    "benefits": [
+      "Create stunning videos effortlessly",
+      "Access professional editing tools",
+      "Export without watermarks",
+      "Save projects in the cloud"
+    ],
+    "image": "/Capcut.png",
+    "popular": true,
+    "badge": "Popular"
+  },
+  {
+    "id": 3,
+    "slug": "google-ai-pro-owner-account",
+    "name": "Google AI Pro Owner Account (18 Months)",
+    "category": "AI Tools",
+    "price": 1499,
+    "oldPrice": 1999,
+    "rating": 5,
+    "reviewCount": 167,
+    "description": "Full owner account access to Google AI Pro with 18 months validity. Includes Gemini Ultra, advanced AI features, and 2TB storage.",
+    "features": [
+      "Owner Account Access",
+      "18 Months Validity",
+      "Gemini Ultra Access",
+      "2TB Cloud Storage",
+      "Advanced AI Features",
+      "Priority Support"
+    ],
+    "benefits": [
+      "Complete control over your account",
+      "Long-term validity at great price",
+      "Access to most advanced Google AI",
+      "Massive storage for all your needs"
+    ],
+    "image": "/Gemini.png",
+    "popular": false,
+    "badge": null
+  },
+  {
+    "id": 4,
+    "slug": "veo-3-ultra",
+    "name": "Veo 3 Ultra",
+    "category": "AI Tools",
+    "price": 1499,
+    "oldPrice": 1899,
+    "rating": 5,
+    "reviewCount": 198,
+    "description": "Google's latest AI video generation model. Create stunning videos from text prompts with ultra-high quality and cinematic results.",
+    "features": [
+      "Text-to-Video Generation",
+      "Ultra High Quality",
+      "Cinematic Results",
+      "Multiple Style Options",
+      "Fast Rendering",
+      "Commercial Use License"
+    ],
+    "benefits": [
+      "Generate professional videos instantly",
+      "Create content without filming",
+      "Access cutting-edge AI technology",
+      "Perfect for content creators"
+    ],
+    "image": "/Veo3.png",
+    "popular": false,
+    "badge": "New"
+  },
+  {
+    "id": 5,
+    "slug": "super-grok",
+    "name": "Super Grok (3 Months)",
+    "category": "AI Tools",
+    "price": 2999,
+    "oldPrice": 3800,
+    "rating": 5,
+    "reviewCount": 156,
+    "description": "Access to xAI's Grok AI with real-time information, advanced reasoning capabilities, and image generation for 3 months.",
+    "features": [
+      "Real-Time Information",
+      "Advanced Reasoning",
+      "Image Generation",
+      "3 Months Access",
+      "X Platform Integration",
+      "No Usage Limits"
+    ],
+    "benefits": [
+      "Get real-time AI responses",
+      "Advanced problem-solving capabilities",
+      "Generate images with AI",
+      "Seamless X platform integration"
+    ],
+    "image": "/Groq.png",
+    "popular": true,
+    "badge": "Premium"
+  },
+  {
+    "id": 6,
+    "slug": "amazon-prime",
+    "name": "Amazon Prime (6 Months)",
+    "category": "Streaming",
+    "price": 1699,
+    "oldPrice": 2499,
+    "rating": 5,
+    "reviewCount": 251,
+    "description": "6 months of Amazon Prime with free shipping, Prime Video streaming, Prime Music, exclusive deals, and Prime Gaming benefits.",
+    "features": [
+      "Free Shipping",
+      "Prime Video Streaming",
+      "Prime Music",
+      "Exclusive Deals",
+      "Prime Gaming",
+      "6 Months Validity"
+    ],
+    "benefits": [
+      "Save on shipping costs",
+      "Watch thousands of movies and shows",
+      "Ad-free music streaming",
+      "Exclusive member discounts"
+    ],
+    "image": "/Prime video.png",
+    "popular": true,
+    "badge": "Best Value"
+  },
+  {
+    "id": 7,
+    "slug": "coursera",
+    "name": "Coursera (1 Year)",
+    "category": "Learning",
+    "price": 2900,
+    "oldPrice": 3500,
+    "rating": 5,
+    "reviewCount": 189,
+    "description": "Full year access to Coursera Plus with unlimited courses from top universities and companies. Earn certificates and advance your career.",
+    "features": [
+      "Unlimited Courses",
+      "Top University Content",
+      "Professional Certificates",
+      "1 Year Access",
+      "Mobile Learning",
+      "Offline Access"
+    ],
+    "benefits": [
+      "Learn from world-class institutions",
+      "Earn recognized certificates",
+      "Advance your career with skills",
+      "Learn at your own pace"
+    ],
+    "image": "/Coursera.png",
+    "popular": false,
+    "badge": null
+  },
+  {
+    "id": 8,
+    "slug": "linkedin-premium-career",
+    "name": "LinkedIn Premium Career (3 Months)",
+    "category": "Productivity",
+    "price": 1099,
+    "oldPrice": 1799,
+    "rating": 5,
+    "reviewCount": 142,
+    "description": "3 months of LinkedIn Premium Career with InMail credits, job insights, learning courses, and profile visibility boost.",
+    "features": [
+      "InMail Credits",
+      "Job Insights",
+      "Learning Courses",
+      "Profile Visibility Boost",
+      "3 Months Access",
+      "Salary Insights"
+    ],
+    "benefits": [
+      "Connect with anyone on LinkedIn",
+      "Get insights on job applications",
+      "Access professional courses",
+      "Stand out to recruiters"
+    ],
+    "image": "/Linkedin.png",
+    "popular": false,
+    "badge": "Career Boost"
+  }
+]

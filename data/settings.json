@@ -1,0 +1,90 @@
+{
+  "businessName": "Z.N.K Tools & Services",
+  "whatsappNumber": "+92 314 3111118",
+  "whatsappLink": "https://wa.me/923143111118",
+  "businessHours": "24/7",
+  "email": "support@znktools.com",
+  "socialLinks": {
+    "facebook": "#znktools",
+    "instagram": "#znktools",
+    "tiktok": "#znktools",
+    "youtube": "#znktools"
+  },
+  "seo": {
+    "defaultTitle": "Z.N.K Tools & Services - Premium Digital Subscriptions",
+    "defaultDescription": "Get genuine AI tools, streaming subscriptions and learning platforms at affordable prices. Instant delivery via WhatsApp.",
+    "defaultKeywords": "AI tools, ChatGPT Plus, CapCut Pro, Google AI, digital subscriptions, streaming, learning platforms"
+  },
+  "trustBadges": [
+    {
+      "icon": "ShieldCheck",
+      "text": "100% Genuine"
+    },
+    {
+      "icon": "Zap",
+      "text": "Instant Delivery"
+    },
+    {
+      "icon": "Award",
+      "text": "Trusted Seller"
+    },
+    {
+      "icon": "DollarSign",
+      "text": "Affordable Prices"
+    },
+    {
+      "icon": "MessageCircle",
+      "text": "24/7 WhatsApp Support"
+    }
+  ],
+  "statistics": [
+    {
+      "value": 2500,
+      "label": "Happy Customers"
+    },
+    {
+      "value": 8,
+      "label": "Premium Products"
+    },
+    {
+      "value": 24,
+      "label": "Hours Support"
+    },
+    {
+      "value": 99,
+      "label": "Satisfaction %"
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "icon": "Zap",
+      "title": "Instant Delivery",
+      "description": "Get your account within minutes after payment confirmation"
+    },
+    {
+      "icon": "DollarSign",
+      "title": "Affordable Prices",
+      "description": "Premium products at the best prices in Pakistan"
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Original Accounts",
+      "description": "100% genuine and legally obtained accounts"
+    },
+    {
+      "icon": "MessageCircle",
+      "title": "WhatsApp Support",
+      "description": "24/7 customer support via WhatsApp"
+    },
+    {
+      "icon": "Award",
+      "title": "Trusted Seller",
+      "description": "Trusted by thousands of customers across Pakistan"
+    },
+    {
+      "icon": "Lock",
+      "title": "Safe Service",
+      "description": "Secure transactions and privacy guaranteed"
+    }
+  ]
+}
