@@ -26,7 +26,7 @@ export default function CategoriesPage() {
         </motion.div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category, index) => {
             const productCount = getCategoryProductCount(category.name);
             
@@ -49,6 +49,7 @@ export default function CategoriesPage() {
                           className="object-contain"
                           sizes="80px"
                           quality={75}
+                          loading="lazy"
                         />
                       ) : (
                         <Bot className="w-10 h-10 text-white" />

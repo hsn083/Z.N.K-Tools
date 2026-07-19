@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import dynamic from "next/dynamic";
+import ClientProviders from "@/components/ClientProviders";
+
+const Navbar = dynamic(() => import("@/components/Navbar"), {
+  ssr: true,
+  loading: () => <nav className="fixed top-0 left-0 right-0 z-50 h-16 md:h-[72px] lg:h-20 bg-[#090909]/95 backdrop-blur-xl border-b border-white/[0.08]" />
+});
+
+const Footer = dynamic(() => import("@/components/Footer"), {
+  ssr: true,
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,10 +52,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <FloatingWhatsApp />
+        <ClientProviders>
+          <Navbar />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </ClientProviders>
       </body>
     </html>
   );

@@ -1,17 +1,31 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Search, SlidersHorizontal } from 'lucide-react';
-import ProductCard from '@/components/ProductCard';
+import dynamic from 'next/dynamic';
 import products from '@/data/products.json';
 import categories from '@/data/categories.json';
 
+const ProductCard = dynamic(() => import('@/components/ProductCard'), {
+  loading: () => <div className="glass rounded-2xl overflow-hidden h-full flex flex-col"><div className="h-32 sm:h-40 md:h-48 lg:h-56 bg-gradient-to-br from-blue-500/20 to-purple-500/20 animate-pulse" /><div className="p-3 md:p-5 flex flex-col flex-1"><div className="h-3 w-16 bg-white/10 rounded animate-pulse mb-2" /><div className="h-5 w-full bg-white/10 rounded animate-pulse mb-2" /><div className="h-5 w-3/4 bg-white/10 rounded animate-pulse mb-3" /><div className="flex items-center gap-2 mb-3"><div className="flex gap-1">{[...Array(5)].map((_, i) => <div key={i} className="w-3 h-3 md:w-4 md:h-4 bg-white/10 rounded animate-pulse" />)}</div><div className="h-3 w-12 bg-white/10 rounded animate-pulse" /></div><div className="h-6 w-24 bg-white/10 rounded animate-pulse mb-4" /><div className="hidden md:block space-y-2 mb-4 flex-1"><div className="h-3 w-full bg-white/10 rounded animate-pulse" /><div className="h-3 w-5/6 bg-white/10 rounded animate-pulse" /></div><div className="h-10 sm:h-11 md:h-12 bg-white/10 rounded-xl animate-pulse mt-auto" /></div></div>
+});
+
 export default function ProductsPage() {
+  const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('popular');
   const [showFilters, setShowFilters] = useState(false);
+
+  // Set search query from URL parameter on mount
+  useEffect(() => {
+    const searchParam = searchParams.get('search');
+    if (searchParam) {
+      setSearchQuery(searchParam);
+    }
+  }, [searchParams]);
 
   const allCategories = ['All', ...categories.map(c => c.name)];
 
@@ -125,7 +139,7 @@ export default function ProductsPage() {
 
         {/* Products Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}

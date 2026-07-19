@@ -12,11 +12,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ShieldCheck, BadgeCheck, Zap, Award, DollarSign, Bot, Brain, Video, Play, Linkedin, Film, MessageSquare, BookOpen, Zap as Productivity, Radio } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
-import ProductCard from '@/components/ProductCard';
+import dynamic from 'next/dynamic';
 import products from '@/data/products.json';
 import categories from '@/data/categories.json';
 import hero from '@/data/hero.json';
 import settings from '@/data/settings.json';
+
+const ProductCard = dynamic(() => import('@/components/ProductCard'), {
+  loading: () => <div className="glass rounded-2xl overflow-hidden h-full flex flex-col"><div className="h-32 sm:h-40 md:h-48 lg:h-56 bg-gradient-to-br from-blue-500/20 to-purple-500/20 animate-pulse" /><div className="p-3 md:p-5 flex flex-col flex-1"><div className="h-3 w-16 bg-white/10 rounded animate-pulse mb-2" /><div className="h-5 w-full bg-white/10 rounded animate-pulse mb-2" /><div className="h-5 w-3/4 bg-white/10 rounded animate-pulse mb-3" /><div className="flex items-center gap-2 mb-3"><div className="flex gap-1">{[...Array(5)].map((_, i) => <div key={i} className="w-3 h-3 md:w-4 md:h-4 bg-white/10 rounded animate-pulse" />)}</div><div className="h-3 w-12 bg-white/10 rounded animate-pulse" /></div><div className="h-6 w-24 bg-white/10 rounded animate-pulse mb-4" /><div className="hidden md:block space-y-2 mb-4 flex-1"><div className="h-3 w-full bg-white/10 rounded animate-pulse" /><div className="h-3 w-5/6 bg-white/10 rounded animate-pulse" /></div><div className="h-10 sm:h-11 md:h-12 bg-white/10 rounded-xl animate-pulse mt-auto" /></div></div>
+});
 
 export default function Home() {
   const featuredProducts = products.filter(p => p.popular).slice(0, 6);
@@ -56,6 +60,7 @@ const iconMap: { [key: string]: any } = {
     alt="Hero Banner"
     fill
     priority
+    loading="eager"
     sizes="100vw"
     className="hidden lg:block object-cover object-right"
   />
@@ -66,6 +71,7 @@ const iconMap: { [key: string]: any } = {
     alt="Hero Banner Mobile"
     fill
     priority
+    loading="eager"
     sizes="100vw"
     className="block lg:hidden object-cover object-center md:object-[center_0px]"
   />
@@ -376,6 +382,7 @@ const iconMap: { [key: string]: any } = {
                     fill
                     className="object-contain p-2"
                     sizes="64px"
+                    loading="lazy"
                   />
                 ) : (
                   <Bot className="w-6 h-6 md:w-8 md:h-8 text-white" />

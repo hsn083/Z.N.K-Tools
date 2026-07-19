@@ -74,6 +74,7 @@ Please share the payment details. Thank you!`;
                 className="object-contain p-2"
                 sizes="(max-width:768px) 50vw, (max-width:1200px) 33vw, 25vw"
                 quality={80}
+                loading="lazy"
               />
             ) : (
               <div className="text-4xl md:text-6xl opacity-50">🚀</div>

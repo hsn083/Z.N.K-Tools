@@ -68,6 +68,7 @@ export default function ReviewCard({ review, index = 0 }: ReviewCardProps) {
                 fill
                 className="object-cover"
                 sizes="48px"
+                loading="lazy"
                 onError={() => setImageError(true)}
               />
             ) : (

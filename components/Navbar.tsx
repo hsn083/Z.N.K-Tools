@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Search } from 'lucide-react';
@@ -11,6 +12,8 @@ import { cn } from '@/utils/cn';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +22,13 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/products?search=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -56,6 +66,7 @@ export default function Navbar() {
                 width={44}
                 height={44}
                 className="object-contain w-full h-full"
+                priority
               />
             </motion.div>
 
@@ -77,16 +88,21 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile/Tablet Search Bar */}
-          <div className="flex-1 mx-3 md:mx-4 lg:hidden">
+          <form onSubmit={handleSearch} className="flex-1 mx-3 md:mx-4 lg:hidden">
             <div className="relative flex items-center h-[38px] px-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
               <Search className="w-4 h-4 text-gray-400 flex-shrink-0" />
               <input
                 type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search AI tools..."
                 className="flex-1 ml-2 bg-transparent text-white text-sm placeholder-gray-400 outline-none"
               />
+              <button type="submit" className="absolute right-2 p-1 text-gray-400 hover:text-white transition-colors">
+                <Search className="w-4 h-4" />
+              </button>
             </div>
-          </div>
+          </form>
 
           {/* Desktop Navigation */}
           <motion.div
@@ -114,10 +130,19 @@ export default function Navbar() {
             className="flex items-center gap-3"
           >
             {/* Desktop Search */}
-            <button className="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10">
-              <Search className="w-4 h-4 text-gray-400" />
-              <span className="text-gray-400 text-sm">Search...</span>
-            </button>
+            <form onSubmit={handleSearch} className="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10">
+              <Search className="w-4 h-4 text-gray-400 flex-shrink-0" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search..."
+                className="flex-1 bg-transparent text-white text-sm placeholder-gray-400 outline-none min-w-[120px]"
+              />
+              <button type="submit" className="text-gray-400 hover:text-white transition-colors">
+                <Search className="w-4 h-4" />
+              </button>
+            </form>
 
             {/* WhatsApp Button */}
             <a
