@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 export default function PrivacyPage() {
-  const [lastUpdated, setLastUpdated] = useState('January 2026');
+  const [lastUpdated, setLastUpdated] = useState<string | null>(null);
 
   useEffect(() => {
     setLastUpdated(new Date().toLocaleDateString());
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
 
             <section>
               <p className="text-gray-500 text-sm">
-                Last updated: {lastUpdated}
+                Last updated: {lastUpdated || 'January 2026'}
               </p>
             </section>
           </div>

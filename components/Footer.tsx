@@ -8,7 +8,7 @@ import { cn } from '@/utils/cn';
 import { useState, useEffect } from 'react';
 
 export default function Footer() {
-  const [currentYear, setCurrentYear] = useState(2026);
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear());
@@ -45,7 +45,7 @@ export default function Footer() {
                 alt="AI Explorer"
                 width={40}
                 height={40}
-                className="rounded-full neon-glow"
+                className="rounded-full neon-glow h-auto"
               />
               <span className="font-bold text-2xl tracking-wide">
                 <span className="text-[#A3E635]">AI</span>
@@ -128,7 +128,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-gray-500 text-sm">
-            © {currentYear} AI Explorer. All rights reserved.
+            © {currentYear || 2026} AI Explorer. All rights reserved.
           </p>
         </div>
       </div>

@@ -65,7 +65,7 @@ export default function Navbar() {
                 alt="AI Explorer Logo"
                 width={44}
                 height={44}
-                className="object-contain w-full h-full"
+                className="object-contain w-full h-auto"
                 priority
               />
             </motion.div>
