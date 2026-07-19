@@ -145,12 +145,12 @@ Customers can order products directly through WhatsApp.
 Order message example:
 
 ```
-Hello! 👋
+Hello! 
 
 I'm interested in purchasing:
 
-✨ ChatGPT Plus Premium
-💰 Price: PKR 1,899
+ ChatGPT Plus Premium
+ Price: PKR 1,899
 
 Please share the payment details. Thank you!
 ```
