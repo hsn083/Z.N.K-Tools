@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description: "Discover the best AI tools, premium subscriptions, productivity software, and digital resources all in one place.",
   keywords: "AI Explorer, AI Tools, ChatGPT Plus, CapCut Pro, Google AI Pro, AI Software, Premium Tools, Digital Products",
   authors: [{ name: "AI Explorer" }],
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "AI Explorer | Premium AI Tools & Digital Resources",
     description: "Discover the best AI tools, premium subscriptions, productivity software, and digital resources all in one place.",
