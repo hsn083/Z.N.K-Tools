@@ -51,11 +51,8 @@ export default function Navbar() {
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 md:gap-4 group whitespace-nowrap flex-shrink-0">
             {/* Logo */}
-            <motion.div
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.3 }}
-              className="relative h-8 w-8 md:h-10 md:w-10 lg:h-11 lg:w-11 flex-shrink-0"
+            <div
+              className="flex items-center justify-center flex-shrink-0"
               style={{
                 filter: 'drop-shadow(0 0 8px rgba(163,230,53,.25))'
               }}
@@ -65,26 +62,21 @@ export default function Navbar() {
                 alt="AI Explorer Logo"
                 width={44}
                 height={44}
-                className="object-contain w-full h-auto"
+                className="w-8 h-8 md:w-10 md:h-10 lg:w-11 lg:h-11 object-contain"
                 priority
               />
-            </motion.div>
+            </div>
 
             {/* Vertical Divider */}
             <div className="h-6 md:h-8 w-px bg-white/20 flex-shrink-0 hidden sm:block" />
 
             {/* AI EXPLORER Text */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.3 }}
-              className="flex items-center hidden sm:block"
-            >
-              <span className="font-bold text-lg md:text-xl lg:text-2xl tracking-wide whitespace-nowrap">
+            <div className="flex items-center hidden sm:block">
+              <span className="font-bold text-lg md:text-xl lg:text-2xl tracking-wide whitespace-nowrap leading-none">
                 <span className="text-[#A3E635]">AI</span>
                 <span className="text-white ml-1">EXPLORER</span>
               </span>
-            </motion.div>
+            </div>
           </Link>
 
           {/* Mobile/Tablet Search Bar */}
